@@ -3,6 +3,7 @@ import useElementOnScreen from "./hooks/useElementOnScreen";
 
 function App() {
   const targetRef = useRef(null);
+
   const isVisible = useElementOnScreen({
     root: null,
     rootMargin: '0px',

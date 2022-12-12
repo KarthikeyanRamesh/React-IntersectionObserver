@@ -15,6 +15,7 @@ const useElementOnScreen = (options, targetRef) => {
   useEffect(() => {
     const observer = new IntersectionObserver(callbackFunction, optionsMemo);
     const currentTarget = targetRef.current;
+
     if(currentTarget) {
       observer.observe(currentTarget);
     }
