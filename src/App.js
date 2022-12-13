@@ -1,13 +1,13 @@
 import React, {useRef} from "react";
-import useElementOnScreen from "./hooks/useElementOnScreen";
+import {useElementOnScreenHook} from "./hooks/useElementOnScreenHook.ts";
 
 function App() {
   const targetRef = useRef(null);
 
-  const isVisible = useElementOnScreen({
+  const isVisible = useElementOnScreenHook({
     root: null,
     rootMargin: '0px',
-    threshold: 0.3
+    threshold: 0.01
   }, targetRef);
 
   return (
